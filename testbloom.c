@@ -43,7 +43,7 @@ void insertHash(int a[], struct Bloom* b){
         m = a[i]%64;
          //printf("top  %" PRIu64 "   \n", b->bit[d]);
         k = (1<<m);
-        if((b->bit[d]&k) > 0)
+        if((b->bit[d] & k) > 0)
             continue;
         else
             b->bit[d] = (b->bit[d] | k);
